@@ -13,6 +13,14 @@ public class Producto {
 
     private String nombre;
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     @Column(name = "id_categoria")
     private Integer idCategoria;
 

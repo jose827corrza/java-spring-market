@@ -12,27 +12,41 @@ public class Categoria {
     @Column(name = "id_categoria")
     private Integer idCategoria;
 
-    private String categoria;
+    private String descripcion;
     private Boolean estado;
+
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    @OneToMany(mappedBy = "categoria") //el atributo que sostiene eso y esta en esa clase
+    private List<Producto> productos;
 
     public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    // Relations
-    @OneToMany(mappedBy = "categoria") //el atributo que sostiene eso y esta en esa clase
-    private List<Producto> productos;
     public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
-    public String getCategoria() {
-        return categoria;
-    }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
+    // Relations
+
+
 
     public Boolean getEstado() {
         return estado;
