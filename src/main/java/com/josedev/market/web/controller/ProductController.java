@@ -3,10 +3,7 @@ package com.josedev.market.web.controller;
 import com.josedev.market.domain.Product;
 import com.josedev.market.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,11 +30,13 @@ public class ProductController {
         return productService.getByCategoryId(categoryId);
     }
 
-    public Product save(Product product) {
+    @PostMapping()
+    public Product save(@RequestBody Product product) {
         return  productService.save(product);
     }
 
-    public boolean deleteProduct(int productId) {
+    @DeleteMapping("/{id}")
+    public boolean deleteProduct(@PathVariable("id") int productId) {
         return productService.delete(productId);
     }
 }

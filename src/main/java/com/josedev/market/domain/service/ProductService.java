@@ -23,6 +23,8 @@ public class ProductService {
     }
 
     public Product save(Product product) {
+//        System.out.println(product);
+//        System.out.println("***");
         return productRepository.save(product);
     }
 

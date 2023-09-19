@@ -35,6 +35,19 @@ public class Producto {
 
     private Boolean estado;
 
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "idProducto=" + idProducto +
+                ", nombre='" + nombre + '\'' +
+                ", idCategoria=" + idCategoria +
+                ", codigoBarras='" + codigoBarras + '\'' +
+                ", precioVenta=" + precioVenta +
+                ", cantidadStock=" + cantidadStock +
+                ", estado=" + estado +
+                ", categoria=" + categoria +
+                '}';
+    }
 
     // Relations
     @ManyToOne

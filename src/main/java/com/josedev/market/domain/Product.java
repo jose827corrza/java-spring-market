@@ -5,6 +5,20 @@ public class Product {
     private String name;
     private int categoryId;
     private double price;
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", name='" + name + '\'' +
+                ", categoryId=" + categoryId +
+                ", price=" + price +
+                ", stock=" + stock +
+                ", active=" + active +
+                ", category=" + category +
+                '}';
+    }
+
     private int stock;
     private boolean active;
     private Category category;
