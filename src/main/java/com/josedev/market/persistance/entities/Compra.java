@@ -32,8 +32,24 @@ public class Compra {
     private Cliente cliente;
 
 
-    @OneToMany(mappedBy = "compra") // Apunta esa compra, para hacer la relacion entre productos que hay en una compra
+    @OneToMany(mappedBy = "compra", cascade = { CascadeType.ALL }) // Apunta esa compra, para hacer la relacion entre productos que hay en una compra
     private List<ComprasProducto> productos;
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
 
     public Integer getIdCompra() {
         return idCompra;
