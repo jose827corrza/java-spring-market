@@ -34,6 +34,6 @@ public interface ProductMapper {
             @Mapping(source = "active", target = "estado"),
             @Mapping(source = "category", target = "categoria"),
     })
-//    @Mapping(target = "codigoBarras",ignore = true)
+    @Mapping(target = "codigoBarras",ignore = true)
     Producto toProducto(Product product);
 }

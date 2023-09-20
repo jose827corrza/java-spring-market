@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.josedev'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 java {
 	sourceCompatibility = '11'
@@ -25,6 +25,9 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 }
